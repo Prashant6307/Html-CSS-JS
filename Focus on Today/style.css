@@ -74,27 +74,41 @@ h2 {
 }
 
 .progress-bar {
-
+    
     height: 30px;
     background-color: rgba(72, 163, 0, 0.1);
     border-radius: 15px;
+    margin-bottom: 45px;
 }
 
 .progress-value {
+    display: flex;
+    align-items: center;
     height: 100%;
-    width: 33%;
+    width: 0%;
     background-color: rgba(72, 163, 0, 1);
     border-radius: 15px;
+    overflow: hidden;
+}
+
+.goal-progress{
+    color: rgba(238, 255, 224, 1);
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 .warning-message {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-
+    color: rgba(255, 81, 81, 1);
     font-size: 14px;
     line-height: 100%;
-
     margin-top: 20px;
+    display: none;
+    position: absolute;
+}
+.show-warning .warning-message{
+    display: block;
 }
 
 .box {
@@ -102,7 +116,7 @@ h2 {
     justify-content: start;
     align-items: center;
     gap: 20px;
-
+    
     min-height: 82px;
     border-radius: 17px;
     border-width: 1px;
@@ -121,17 +135,24 @@ h2 {
     border: 1px solid rgba(97, 72, 28, 0.3);
     flex-shrink: 0;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
 }
 
 .goal-input {
     background-color: rgba(255, 255, 255, 1);
     font-family: inherit;
     font-size: 16px;
+    font-weight: 500;
     border: none;
     outline: none;
     flex-grow: 1;
     align-self: stretch;
     border-radius: 17px;
+    margin-left: 20px;
 }
 
 .goal-input::placeholder {
@@ -153,6 +174,27 @@ h2 {
     margin-top: 64px;
 
 }
+
+.completed .checkbox {
+    background-color: rgba(72, 163, 0, 1);
+    border-color: rgba(72, 163, 0, 1);
+}
+
+.check-icon{
+    display: none;
+}
+
+.completed .check-icon{
+    display: block;
+    
+}
+
+.completed .goal-input{
+    color: rgba(72, 163, 0, 1);
+    text-decoration: line-through;
+}
+
+
 
 @media (max-width: 768px) {
     .heading {
@@ -179,5 +221,9 @@ h2 {
     .sun-img{
         height: 40px;
         width: 40px;
+    }
+    .goal-progress{
+        font-size: 10px;
+        margin-left: 6px;
     }
 }
