@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(246, 240, 235, 1);
+}
+
+header {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.logo img {
+    max-width: 100%;
+
+}
+
+nav {
+    display: flex;
+    gap: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(73, 33, 24, 1);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+main {
+    padding: 0 24px;
+}
+
+.hero-section {
+    margin-top: 100px;
+}
+
+.hero-img {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+.hero-section p {
+    color: rgba(73, 33, 24, 1);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.section {
+    margin-top: 120px;
+}
+
+.section h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: rgba(73, 33, 24, 1);
+    text-align: center;
+}
+
+.img-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.go-up {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: right;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.go-up a {
+    color: rgba(73, 33, 24, 1);
+    text-decoration: underline;
+}
+
+.close-icon {
+    display: none;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+@media (max-width : 1230px) {
+    nav {
+        gap: 30px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 16px;
+    }
+
+    .hero-section {
+        margin-top: 32px;
+    }
+
+    .section {
+        margin-top: 42px;
+    }
+
+}
+
+@media(max-width:770px) {
+    header {
+        background-color: rgba(255, 255, 255, 1);
+        position: sticky;
+        top: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
+        flex-direction: column;
+        gap: 0px;
+        right: 24px;
+        top: 0;
+        padding: 12px 24px;
+        display: none;
+    }
+
+    nav a {
+        margin-top: 16px;
+    }
+
+    .hero-section p {
+        font-size: 10px;
+    }
+
+    .section h2 {
+        font-size: 14px;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 10px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        font-size: 32px;
+    }
+
+}
