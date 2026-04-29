@@ -14,11 +14,12 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    position: relative;
 }
 
 .logo {
@@ -26,20 +27,20 @@ header {
 }
 
 .logo img {
-    max-width: 100%;
-
+    width: 100%;
 }
 
-nav {
+.nav {
     display: flex;
     gap: 60px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: rgba(73, 33, 24, 1);
     font-size: 24px;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 main {
@@ -61,7 +62,6 @@ img {
 
 .hero-section p {
     color: rgba(73, 33, 24, 1);
-    font-weight: 400;
     font-size: 24px;
     text-align: center;
 }
@@ -71,7 +71,6 @@ img {
 }
 
 .section h2 {
-    font-weight: 700;
     font-size: 48px;
     margin-bottom: 10px;
     color: rgba(73, 33, 24, 1);
@@ -84,16 +83,15 @@ img {
 }
 
 .go-up {
-    font-weight: 700;
     font-size: 32px;
     text-align: right;
     max-width: 950px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .go-up a {
     color: rgba(73, 33, 24, 1);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .close-icon {
@@ -102,14 +100,16 @@ img {
 
 .hamburger-icon {
     display: none;
+    cursor: pointer;
 }
 
-@media (max-width : 1230px) {
-    nav {
+@media (max-width: 1230px) {
+
+    .nav {
         gap: 30px;
     }
 
-    nav a {
+    .nav a {
         font-size: 16px;
     }
 
@@ -124,45 +124,44 @@ img {
     .section {
         margin-top: 42px;
     }
-
 }
 
-@media(max-width:770px) {
+@media (max-width: 770px) {
+
     header {
-        background-color: rgba(255, 255, 255, 1);
         position: sticky;
         top: 0;
+        z-index: 100;
     }
 
-    nav {
-        margin-top: 10px;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 1);
-        flex-direction: column;
-        gap: 0px;
-        right: 24px;
-        top: 0;
-        padding: 12px 24px;
+    .nav {
         display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    nav a {
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
         margin-top: 16px;
-    }
-
-    .hero-section p {
-        font-size: 10px;
-    }
-
-    .section h2 {
-        font-size: 14px;
     }
 
     .close-icon {
         display: block;
         position: absolute;
-        cursor: pointer;
         right: 10px;
+        top: 5px;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     .hamburger-icon {
@@ -170,4 +169,11 @@ img {
         font-size: 32px;
     }
 
+    .hero-section p {
+        font-size: 12px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
 }
