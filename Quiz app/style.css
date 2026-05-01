@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.home-page{
+    background-color: rgba(246, 244, 240, 1);
+    height: 100vh;
+}
+.home-page h1 {
+    font-size: 53px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.h1-bg {
+    background-color: rgba(53, 189, 58, 1);
+    width :465px ;
+    height : 127px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+}
+
+.home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
