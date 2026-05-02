@@ -6,16 +6,40 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" defer type="module"></script>
 </head>
 <body>
     <main>
-        <div class="home-page">
-            <img src="images/quiz_time.png" alt="">
+        <div class="home-page ">
+            <img src="images/quiz_time.png" alt="quiz-image">
             <div class="h1-bg">
-                <h1>Start Now >>></h1>
+                <h1 class="start-btn">Start Now >>></h1>
             </div>
-            
+        </div>
+        <div class="questions ">
+            <div class="container">
+                <img src="images/quiz_time2.png" alt="quiz-image">
+                <div class="question-count">
+                    <img class="volume-btn" src="images/volume_icon.png" alt="volume-btn">
+                    <div class="current-question-count">2/25</div>
+                    
+                </div>
+                <div class="question-container ">
+                    <p class="current-question">Inside which HTML element do we put the JavaScript? </p>
+                </div>
+                <div class="countdown">
+                    <p>00:30</p>
+                </div>
+                <div class="option-container">
+                    <div id="opt-1" class="options">&lt;js&gt;</div>
+                    <div id="opt-2" class="options">&lt;scripting&gt;</div>
+                    <div id="opt-3" class="options">&lt;javascript&gt;</div>
+                    <div id="opt-4" class="options">&lt;script&gt;</div>
+                </div>
+                <div class="btn-container">
+                    <button class="next-btn">Next ></button>
+                </div>
+            </div>
         </div>
     </main>
     
