@@ -62,11 +62,12 @@
     margin-top: 10px;
     border-radius: 7px;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    padding: 4px;
 }
 
 .question-container{
@@ -140,4 +141,19 @@
 
 .question-display{
     display: block;
+}
+
+.correct-option{
+    border: 3px solid rgba(53, 189, 58, 1);
+}
+.wrong-option{
+    border: 3px solid rgba(255, 122, 122, 1);
+}
+
+
+.time-out{
+    font-size: 120px;
+    font-weight: 600;
+    color: rgb(252, 79, 79);
+    position: absolute;
 }
