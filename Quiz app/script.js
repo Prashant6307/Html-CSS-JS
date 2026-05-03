@@ -7,9 +7,18 @@ const questionText = document.querySelector('.current-question')
 const nextBtn = document.querySelector('.next-btn')
 const currentQuestionCount = document.querySelector('.current-question-count')
 const time = document.querySelector('.time')
+const submitBtn = document.querySelector('.submit-btn')
+const result = document.querySelector('.result')
+const right = document.querySelector('.right')
+const wrong = document.querySelector('.wrong')
+const finalScore = document.querySelector('.final-score')
+const retryBtn = document.querySelector('.retry-btn')
+let optionValue = false
 let currentIndex = 0;
 let totalTime = 30
 let timer
+let score = 0
+let wrongOption = 0
 
 function loadQuestion() {
     const currentQuestion = questionsArray[currentIndex]
@@ -22,6 +31,7 @@ function loadQuestion() {
     questions.style.backgroundColor = "rgba(204, 226, 194, 1)";
     nextBtn.style.color = "rgba(1, 171, 8, 1)";
     localStorage.setItem("currentIndex", currentIndex)
+    optionValue = false;
 
 }
 function chooseOption() {
@@ -31,13 +41,18 @@ function chooseOption() {
         option.addEventListener('click', () => {
             const currentQuestion = questionsArray[currentIndex]
             const currentQuestionAnswer = currentQuestion.answer
-            if (document.querySelector('.correct-option') || document.querySelector('.wrong-option')) return;
-
+            // if (document.querySelector('.correct-option') || document.querySelector('.wrong-option')) return;
+            if (optionValue) return;
+            optionValue = true
             if (option.innerText === currentQuestionAnswer) {
                 option.classList.add("correct-option")
+                score++
+
             }
             else {
                 option.classList.add('wrong-option')
+                wrongOption++
+
             }
 
         })
@@ -52,17 +67,22 @@ startBtn.addEventListener('click', () => {
     questions.classList.add("question-display")
     loadCurrentQuestion()
     currentQuestionCount.innerText = `${currentIndex + 1} / ${questionsArray.length}`
-    loadQuestion()
     chooseOption()
     countDown()
 
 })
 
 nextBtn.addEventListener('click', () => {
+    // if (!optionValue) return
     currentIndex++
     loadQuestion()
     currentQuestionCount.innerText = `${currentIndex + 1} / ${questionsArray.length}`
     countDown()
+    optionValue = false
+    if (currentIndex === questionsArray.length - 1) {
+        nextBtn.style.display = "none"
+        submitBtn.style.display = "block"
+    }
 })
 
 function countDown() {
@@ -86,3 +106,41 @@ function countDown() {
         }
     }, 1000);
 }
+
+
+submitBtn.addEventListener('click', () => {
+    questions.classList.add("questions-display-submit")
+    result.classList.add("result-display")
+    localStorage.removeItem("currentIndex");
+    let scoreValue = Math.floor((score/questionsArray.length)*100)
+    right.style.width = `${scoreValue}%`
+    right.innerText = `${scoreValue}%`
+    wrong.innerText = `${100 - scoreValue}%`
+    finalScore.innerText = `${score}/${questionsArray.length}`
+
+
+})
+
+retryBtn.addEventListener('click',() => {
+
+    currentIndex = 0;
+    score = 0;
+    wrongOption = 0;
+    optionValue = false;
+
+    localStorage.removeItem("currentIndex");
+
+    result.classList.remove("result-display");
+    questions.classList.remove("questions-display-submit");
+
+    questions.classList.add("question-display");
+
+    nextBtn.style.display = "block";
+    submitBtn.style.display = "none";
+
+    loadQuestion();
+    currentQuestionCount.innerText = `1 / ${questionsArray.length}`;
+
+    countDown();
+    
+})

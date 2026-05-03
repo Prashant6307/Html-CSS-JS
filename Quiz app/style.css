@@ -138,9 +138,24 @@
     font-weight: 600;
     font-size: 24px;
 }
-
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.submit-btn{
+    border: none;
+    background-color: transparent;
+    color: rgba(1, 171, 8, 1);
+    font-weight: 600;
+    font-size: 24px;
+    display: none;
+}
 .question-display{
     display: block;
+}
+
+.questions-display-submit{
+    display: none;
 }
 
 .correct-option{
@@ -156,4 +171,98 @@
     font-weight: 600;
     color: rgb(252, 79, 79);
     position: absolute;
+}
+
+.result{
+    background-color: rgba(246, 244, 240, 1);
+    display: none;
+}
+
+.result-display{
+    display: block;
+}
+
+.result-container{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.score{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    height: 100px;
+    width: 600px;
+    background-color: rgba(255, 122, 122, 1);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.right{
+    height: 100px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+    font-size: 24px;
+    background-color: rgba(53, 189, 58, 1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: max-content;
+}
+.wrong{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+    font-size: 24px;
+    margin-right: 20px;
+    
+}
+
+.final-score{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+}
+
+.message{
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 40px;
+}
+.text{
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    
+}
+
+.retry-btn{
+    height: 56px;
+    width: 216px;
+    background-color: rgba(53, 189, 58, 1);
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.share-on{
+    color: rgba(83, 83, 83, 1);
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 120px;
+}
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

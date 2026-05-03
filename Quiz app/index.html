@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="icon" href="images/quiz.png">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer type="module"></script>
 </head>
+
 <body>
     <main>
         <div class="home-page ">
@@ -23,7 +27,7 @@
                 <div class="question-count">
                     <img class="volume-btn" src="images/volume_icon.png" alt="volume-btn">
                     <div class="current-question-count"></div>
-                    
+
                 </div>
                 <div class="question-container ">
                     <p class="current-question"></p>
@@ -33,16 +37,47 @@
                 </div>
                 <div class="option-container">
                     <div id="opt-1" class="options"></div>
-                    <div id="opt-2" class="options correct-option"></div>
+                    <div id="opt-2" class="options"></div>
                     <div id="opt-3" class="options "></div>
                     <div id="opt-4" class="options"></div>
                 </div>
                 <div class="btn-container">
                     <button class="next-btn">Next ></button>
                 </div>
+                <div class="submit">
+                    <button class="submit-btn">Submit</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="result">
+            <div class="result-container">
+
+                <img src="images/quiz_time2.png" alt="quiz-image">
+                <p class="text">Result</p>
+                <div class="score">
+                    <div class="right"></div>
+                    <div class="wrong"></div>
+                </div>
+                <p class="final-score"></p>
+                
+                <div>
+                    <p class="message">"Keep learning, you have a good score!"</p>
+                </div>
+                <button class="retry-btn">&lt;&lt;&lt;Retry</button>
+
+                <div class="share-score">
+                    <p class="share-on">Share your score:</p>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com"><img src="images/linkedIn_.png" alt="linkedIn"></a>
+                        <a href="https://www.twitter.com"><img src="images/twitter.png" alt="twitter"></a>
+                        <a href="https://www.instagram.com"><img src="images/instagram.png" alt="instagram"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    
+
 </body>
+
 </html>
