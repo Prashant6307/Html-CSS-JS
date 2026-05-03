@@ -273,3 +273,16 @@
     font-size: 24px ;
     color: rgba(0, 0, 0, 1);
 }
+
+.time-out {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: 600;
+    color: red;
+    
+    display: none;
+}
+

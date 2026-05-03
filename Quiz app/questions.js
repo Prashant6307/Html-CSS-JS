@@ -106,7 +106,7 @@ const questionsArray = [
 },
 {
   question: "Which tag is used for JavaScript in HTML?",
-  options: ["&lt;js&gt;", "&lt;script&gt;", "&lt;javascript&gt;", "&lt;code&gt;"],
+  options: ["<js>", "<script>", "<javascript>", "<code>"],
   answer: "<script>"
 },
 {

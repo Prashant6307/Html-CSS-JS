@@ -14,19 +14,27 @@ const wrong = document.querySelector('.wrong')
 const finalScore = document.querySelector('.final-score')
 const retryBtn = document.querySelector('.retry-btn')
 const highestScore = document.querySelector(".high-score")
+const music = document.querySelector('#bg-music');
+const volumeBtn = document.querySelector('.volume-btn')
+const volumeMute = document.querySelector('.volume-mute')
+const timeOutText = document.querySelector('.time-out')
+const message = document.querySelector('.message')
 let optionValue = false
 let currentIndex = 0;
-let totalTime = 30
+let totalTime
+let isTimeup = false
 let timer
 let score = 0
 let wrongOption = 0
 
 
+
+
 const highscore = Number(localStorage.getItem("highscore")) || 0;
-if(highscore===0){
+if (highscore === 0) {
     highestScore.style.display = "none"
 }
-else{
+else {
     highestScore.style.display = "block"
     highestScore.innerText = `Highest Score: ${highscore} / ${questionsArray.length}`;
 }
@@ -38,37 +46,35 @@ function loadQuestion() {
     options.forEach((option, index) => {
         option.innerText = currentQuestion.options[index]
         option.classList.remove("correct-option", "wrong-option")
+        option.style.pointerEvents = "auto"
     })
     questions.style.backgroundColor = "rgba(204, 226, 194, 1)";
     nextBtn.style.color = "rgba(1, 171, 8, 1)";
     localStorage.setItem("currentIndex", currentIndex)
 
     optionValue = false;
-
+    isTimeup = false;
 }
 function chooseOption() {
-
-
     options.forEach((option) => {
         option.addEventListener('click', () => {
             const currentQuestion = questionsArray[currentIndex]
             const currentQuestionAnswer = currentQuestion.answer
-            if (document.querySelector('.correct-option') || document.querySelector('.wrong-option')) return;
-            if (optionValue) return;
+
+            if (optionValue || isTimeup) return;
+
             optionValue = true
             if (option.innerText === currentQuestionAnswer) {
                 option.classList.add("correct-option")
                 score++
-
             }
             else {
                 option.classList.add('wrong-option')
                 wrongOption++
-
             }
-
         })
     })
+
 }
 function loadCurrentQuestion() {
     currentIndex = Number(localStorage.getItem("currentIndex")) || 0;
@@ -81,26 +87,29 @@ startBtn.addEventListener('click', () => {
     currentQuestionCount.innerText = `${currentIndex + 1} / ${questionsArray.length}`
 
     countDown()
-
+    music.play()
+    music.volume = 0.1
 })
 chooseOption()
 
 nextBtn.addEventListener('click', () => {
-    if (!optionValue) return
+    if (!optionValue && !isTimeup) return;
     currentIndex++
     loadQuestion()
     currentQuestionCount.innerText = `${currentIndex + 1} / ${questionsArray.length}`
+    timeOutText.style.display = "none";
     countDown()
-    optionValue = false
+
     if (currentIndex === questionsArray.length - 1) {
         nextBtn.style.display = "none"
         submitBtn.style.display = "block"
     }
+
 })
 
 function countDown() {
     clearInterval(timer);
-    totalTime = 30;
+    totalTime = 30
     timer = setInterval(() => {
 
         totalTime--
@@ -115,8 +124,14 @@ function countDown() {
         }
         if (totalTime === 0) {
             clearInterval(timer)
-
+            timeOutText.style.display = "block";
+            isTimeup = true
+            options.forEach(opt => {
+                opt.style.pointerEvents = "none";
+            });
         }
+
+
     }, 1000);
 }
 
@@ -137,8 +152,24 @@ submitBtn.addEventListener('click', () => {
     const updatedHighScore = Number(localStorage.getItem("highscore")) || 0;
     highestScore.innerText = `Highest Score: ${updatedHighScore} / ${questionsArray.length}`;
 
-
-
+    let messageScore = Math.floor((score / questionsArray.length) * 100)
+    if (messageScore === 100) {
+        message.innerText = "Perfect score! You're a genius!"
+        wrong.style.display = "none"
+    }
+    else if (messageScore>=80) {
+        message.innerText = "Great job! You really know your stuff!"
+    }
+    else if (messageScore>=60) {
+        message.innerText = "Good effort! Keep practicing!"
+    }
+    else if (messageScore>=40) {
+        message.innerText = "Not bad, but you can do better!"
+    }
+    else {
+        message.innerText = "Keep learning! Practice makes perfect!"
+    }
+    music.pause()
 })
 
 retryBtn.addEventListener('click', () => {
@@ -164,4 +195,18 @@ retryBtn.addEventListener('click', () => {
     countDown();
     const highscore = Number(localStorage.getItem("highscore")) || 0;
     highestScore.innerText = `Highest Score: ${highscore} / ${questionsArray.length}`;
+    timeOutText.style.display = "none";
+    music.play()
 })
+
+volumeBtn.addEventListener('click', () => {
+    if (music.paused) {
+        music.play()
+        volumeBtn.src = "images/volume_icon.png"
+    } else {
+        music.pause()
+        volumeBtn.src = "images/volume_mute_.png"
+    }
+});
+
+
