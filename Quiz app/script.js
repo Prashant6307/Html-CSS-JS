@@ -13,12 +13,23 @@ const right = document.querySelector('.right')
 const wrong = document.querySelector('.wrong')
 const finalScore = document.querySelector('.final-score')
 const retryBtn = document.querySelector('.retry-btn')
+const highestScore = document.querySelector(".high-score")
 let optionValue = false
 let currentIndex = 0;
 let totalTime = 30
 let timer
 let score = 0
 let wrongOption = 0
+
+
+const highscore = Number(localStorage.getItem("highscore")) || 0;
+if(highscore===0){
+    highestScore.style.display = "none"
+}
+else{
+    highestScore.style.display = "block"
+    highestScore.innerText = `Highest Score: ${highscore} / ${questionsArray.length}`;
+}
 
 function loadQuestion() {
     const currentQuestion = questionsArray[currentIndex]
@@ -31,6 +42,7 @@ function loadQuestion() {
     questions.style.backgroundColor = "rgba(204, 226, 194, 1)";
     nextBtn.style.color = "rgba(1, 171, 8, 1)";
     localStorage.setItem("currentIndex", currentIndex)
+
     optionValue = false;
 
 }
@@ -41,7 +53,7 @@ function chooseOption() {
         option.addEventListener('click', () => {
             const currentQuestion = questionsArray[currentIndex]
             const currentQuestionAnswer = currentQuestion.answer
-            // if (document.querySelector('.correct-option') || document.querySelector('.wrong-option')) return;
+            if (document.querySelector('.correct-option') || document.querySelector('.wrong-option')) return;
             if (optionValue) return;
             optionValue = true
             if (option.innerText === currentQuestionAnswer) {
@@ -67,13 +79,14 @@ startBtn.addEventListener('click', () => {
     questions.classList.add("question-display")
     loadCurrentQuestion()
     currentQuestionCount.innerText = `${currentIndex + 1} / ${questionsArray.length}`
-    chooseOption()
+
     countDown()
 
 })
+chooseOption()
 
 nextBtn.addEventListener('click', () => {
-    // if (!optionValue) return
+    if (!optionValue) return
     currentIndex++
     loadQuestion()
     currentQuestionCount.innerText = `${currentIndex + 1} / ${questionsArray.length}`
@@ -112,16 +125,23 @@ submitBtn.addEventListener('click', () => {
     questions.classList.add("questions-display-submit")
     result.classList.add("result-display")
     localStorage.removeItem("currentIndex");
-    let scoreValue = Math.floor((score/questionsArray.length)*100)
+    let scoreValue = Math.floor((score / questionsArray.length) * 100)
     right.style.width = `${scoreValue}%`
     right.innerText = `${scoreValue}%`
     wrong.innerText = `${100 - scoreValue}%`
     finalScore.innerText = `${score}/${questionsArray.length}`
+    const highscore = Number(localStorage.getItem("highscore")) || 0
+    if (score > highscore) {
+        localStorage.setItem("highscore", score)
+    }
+    const updatedHighScore = Number(localStorage.getItem("highscore")) || 0;
+    highestScore.innerText = `Highest Score: ${updatedHighScore} / ${questionsArray.length}`;
+
 
 
 })
 
-retryBtn.addEventListener('click',() => {
+retryBtn.addEventListener('click', () => {
 
     currentIndex = 0;
     score = 0;
@@ -142,5 +162,6 @@ retryBtn.addEventListener('click',() => {
     currentQuestionCount.innerText = `1 / ${questionsArray.length}`;
 
     countDown();
-    
+    const highscore = Number(localStorage.getItem("highscore")) || 0;
+    highestScore.innerText = `Highest Score: ${highscore} / ${questionsArray.length}`;
 })

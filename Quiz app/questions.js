@@ -1,129 +1,129 @@
 const questionsArray = [
-  {
-    question: "What is the capital of India?",
-    options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
-    answer: "Delhi"
-  },
-  {
-    question: "2 + 2 = ?",
-    options: ["3", "4", "5", "6"],
-    answer: "4"
-  },
-  {
-    question: "Which language runs in browser?",
-    options: ["Java", "C", "Python", "JavaScript"],
-    answer: "JavaScript"
-  },
-  {
-    question: "HTML stands for?",
-    options: ["Hyper Text Markup Language", "High Text Machine Language", "Hyper Tool Multi Language", "None"],
-    answer: "Hyper Text Markup Language"
-  },
-  {
-    question: "CSS is used for?",
-    options: ["Structure", "Styling", "Database", "Logic"],
-    answer: "Styling"
-  },
-  {
-    question: "Which tag is used for JavaScript?",
-    options: ["<js>", "<script>", "<javascript>", "<code>"],
-    answer: "<script>"
-  },
-  {
-    question: "Which company developed Java?",
-    options: ["Microsoft", "Sun Microsystems", "Google", "Apple"],
-    answer: "Sun Microsystems"
-  },
-  {
-    question: "Which is not a programming language?",
-    options: ["Python", "HTML", "Java", "C++"],
-    answer: "HTML"
-  },
-  {
-    question: "Which symbol is used for comments in JavaScript?",
-    options: ["//", "#", "<!-- -->", "**"],
-    answer: "//"
-  },
-  {
-    question: "Which keyword is used to declare variable in JS?",
-    options: ["var", "int", "string", "float"],
-    answer: "var"
-  },
-  {
-    question: "Which method prints in console?",
-    options: ["print()", "log()", "console.log()", "echo()"],
-    answer: "console.log()"
-  },
-  {
-    question: "Which HTML tag is used for heading?",
-    options: ["<p>", "<h1>", "<div>", "<span>"],
-    answer: "<h1>"
-  },
-  {
-    question: "Which CSS property changes text color?",
-    options: ["font", "text-color", "color", "background"],
-    answer: "color"
-  },
-  {
-    question: "Which is used to connect CSS?",
-    options: ["<style>", "<link>", "<css>", "<script>"],
-    answer: "<link>"
-  },
-  {
-    question: "Which is a JavaScript framework?",
-    options: ["React", "Django", "Flask", "Laravel"],
-    answer: "React"
-  },
-  {
-    question: "Which operator is used for equality?",
-    options: ["=", "==", "===", "!="],
-    answer: "==="
-  },
-  {
-    question: "Which loop runs at least once?",
-    options: ["for", "while", "do-while", "foreach"],
-    answer: "do-while"
-  },
-  {
-    question: "Which function converts string to integer in JS?",
-    options: ["parseInt()", "toString()", "Number()", "int()"],
-    answer: "parseInt()"
-  },
-  {
-    question: "Which is used to store multiple values?",
-    options: ["Variable", "Array", "Function", "Loop"],
-    answer: "Array"
-  },
-  {
-    question: "Which HTML tag is used for image?",
-    options: ["<img>", "<image>", "<pic>", "<src>"],
-    answer: "<img>"
-  },
-  {
-    question: "Which attribute is used for image path?",
-    options: ["link", "src", "href", "path"],
-    answer: "src"
-  },
-  {
-    question: "Which keyword defines function in JS?",
-    options: ["func", "function", "def", "method"],
-    answer: "function"
-  },
-  {
-    question: "Which event occurs on button click?",
-    options: ["onchange", "onmouseover", "onclick", "onload"],
-    answer: "onclick"
-  },
-  {
-    question: "Which method adds element at end of array?",
-    options: ["push()", "pop()", "shift()", "unshift()"],
-    answer: "push()"
-  },
-  {
-    question: "Which method removes last element?",
-    options: ["push()", "pop()", "shift()", "slice()"],
-    answer: "pop()"
-  }
+{
+  question: "What is the output of typeof null in JavaScript?",
+  options: ["null", "object", "undefined", "number"],
+  answer: "object"
+},
+{
+  question: "Which data structure follows FIFO?",
+  options: ["Stack", "Queue", "Tree", "Graph"],
+  answer: "Queue"
+},
+{
+  question: "Time complexity of binary search?",
+  options: ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+  answer: "O(log n)"
+},
+{
+  question: "Which is NOT a primitive type in JavaScript?",
+  options: ["string", "number", "object", "boolean"],
+  answer: "object"
+},
+{
+  question: "Which method adds element at the end of array?",
+  options: ["push()", "pop()", "shift()", "unshift()"],
+  answer: "push()"
+},
+{
+  question: "Which keyword is used to declare constant in JS?",
+  options: ["var", "let", "const", "static"],
+  answer: "const"
+},
+{
+  question: "What does HTML stand for?",
+  options: ["Hyper Trainer Marking Language", "Hyper Text Markup Language", "Hyper Text Marketing Language", "High Text Markup Language"],
+  answer: "Hyper Text Markup Language"
+},
+{
+  question: "Which symbol is used for comments in JavaScript?",
+  options: ["//", "/* */", "#", "<!-- -->"],
+  answer: "//"
+},
+{
+  question: "Which data structure uses LIFO?",
+  options: ["Queue", "Stack", "Array", "Graph"],
+  answer: "Stack"
+},
+{
+  question: "Which operator is used for strict equality?",
+  options: ["==", "=", "===", "!="],
+  answer: "==="
+},
+{
+  question: "Which loop runs at least once?",
+  options: ["for", "while", "do...while", "foreach"],
+  answer: "do...while"
+},
+{
+  question: "Which method removes last element from array?",
+  options: ["pop()", "push()", "shift()", "slice()"],
+  answer: "pop()"
+},
+{
+  question: "Which language runs in browser?",
+  options: ["Java", "C", "Python", "JavaScript"],
+  answer: "JavaScript"
+},
+{
+  question: "Which is used to style web pages?",
+  options: ["HTML", "CSS", "Python", "Java"],
+  answer: "CSS"
+},
+{
+  question: "What is output of 2 + '2'?",
+  options: ["4", "22", "NaN", "undefined"],
+  answer: "22"
+},
+{
+  question: "Which keyword is used for function in JS?",
+  options: ["func", "function", "define", "method"],
+  answer: "function"
+},
+{
+  question: "Which structure is hierarchical?",
+  options: ["Array", "Tree", "Stack", "Queue"],
+  answer: "Tree"
+},
+{
+  question: "Which keyword is used to exit loop?",
+  options: ["stop", "exit", "break", "return"],
+  answer: "break"
+},
+{
+  question: "Which method converts JSON to object?",
+  options: ["JSON.stringify()", "JSON.parse()", "JSON.convert()", "JSON.object()"],
+  answer: "JSON.parse()"
+},
+{
+  question: "Which company developed Java?",
+  options: ["Microsoft", "Sun Microsystems", "Google", "IBM"],
+  answer: "Sun Microsystems"
+},
+{
+  question: "Which is not an OOP concept?",
+  options: ["Encapsulation", "Polymorphism", "Abstraction", "Compilation"],
+  answer: "Compilation"
+},
+{
+  question: "Which tag is used for JavaScript in HTML?",
+  options: ["&lt;js&gt;", "&lt;script&gt;", "&lt;javascript&gt;", "&lt;code&gt;"],
+  answer: "<script>"
+},
+{
+  question: "Which method is used to print in console?",
+  options: ["print()", "console.log()", "echo()", "log()"],
+  answer: "console.log()"
+},
+{
+  question: "Which is used to define class in JS?",
+  options: ["class", "object", "define", "function"],
+  answer: "class"
+},
+{
+  question: "Which algorithm is used in binary search?",
+  options: ["Divide and Conquer", "Greedy", "Backtracking", "Dynamic Programming"],
+  answer: "Divide and Conquer"
+}
 ];
 
 export { questionsArray}

@@ -266,3 +266,10 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.high-score{
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 24px ;
+    color: rgba(0, 0, 0, 1);
+}
