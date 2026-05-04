@@ -4,10 +4,12 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-.home-page{
+
+.home-page {
     background-color: rgba(246, 244, 240, 1);
     height: 100vh;
 }
+
 .home-page h1 {
     font-size: 53px;
     color: rgba(255, 255, 255, 1);
@@ -15,47 +17,51 @@
 
 .h1-bg {
     background-color: rgba(53, 189, 58, 1);
-    width :465px ;
-    height : 127px;
+    width: 465px;
+    height: 127px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 9px;
 }
 
-.home-page{
+.home-page {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
 }
 
-.home-display{
+.home-display {
     display: none;
 }
 
-.questions{
+.questions {
     min-height: 100vh;
     background-color: rgba(204, 226, 194, 1);
     padding: 24px 64px;
     display: none;
 }
 
-.container img{
+.container img {
     height: 64px;
     width: 120px;
 }
-.question-count{
+
+.question-count {
     display: flex;
     flex-direction: column;
     align-items: end;
     top: 0px;
 }
-.question-count img{
+
+.question-count img {
     height: 24px;
     width: 36px;
 }
-.current-question-count{
+
+.current-question-count {
     background-color: rgba(254, 195, 61, 1);
     height: 48px;
     width: 96px;
@@ -70,48 +76,52 @@
     padding: 4px;
 }
 
-.question-container{
+.question-container {
     display: flex;
     align-items: center;
     padding: 10px 20px;
     height: 150px;
     max-width: 1430px;
     background-color: rgba(245, 245, 245, 0.48);
-    
+
 }
-.question-container p{
+
+.question-container p {
     font-weight: 600;
     font-size: 24px;
     color: rgba(0, 0, 0, 1);
 }
-.countdown{
+
+.countdown {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.countdown p{
+.countdown p {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     align-self: flex-end;
     background-color: rgba(2, 164, 9, 0.43);
     width: 120px;
     height: 48px;
+    padding: 4px 8px;
     margin: 10px 0px;
     border-radius: 7px;
     font-weight: 600;
     color: rgba(255, 255, 255, 1);
     font-size: 40px;
 }
-.option-container{
+
+.option-container {
     background-color: rgba(245, 245, 245, 0.48);
     border-radius: 13px;
     max-width: 1030px;
     padding: 10px 16px;
 }
 
-.options{
+.options {
     display: flex;
     align-items: center;
     margin: 16px 0;
@@ -125,24 +135,26 @@
     color: rgba(0, 0, 0, 1);
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: flex-end;
-    
+
 }
 
-.btn-container button{
+.btn-container button {
     border: none;
     background-color: transparent;
     color: rgba(1, 171, 8, 1);
     font-weight: 600;
     font-size: 24px;
 }
-.submit{
+
+.submit {
     display: flex;
     justify-content: center;
 }
-.submit-btn{
+
+.submit-btn {
     border: none;
     background-color: transparent;
     color: rgba(1, 171, 8, 1);
@@ -150,48 +162,57 @@
     font-size: 24px;
     display: none;
 }
-.question-display{
+
+.question-display {
     display: block;
 }
 
-.questions-display-submit{
+.questions-display-submit {
     display: none;
 }
 
-.correct-option{
+.correct-option {
     border: 3px solid rgba(53, 189, 58, 1);
 }
-.wrong-option{
+
+.wrong-option {
     border: 3px solid rgba(255, 122, 122, 1);
 }
 
 
-.time-out{
+.time-out {
     font-size: 120px;
     font-weight: 600;
     color: rgb(252, 79, 79);
     position: absolute;
+    
 }
 
-.result{
+.result {
     background-color: rgba(246, 244, 240, 1);
     display: none;
+    
 }
 
-.result-display{
+.result-display {
     display: block;
 }
 
-.result-container{
+.result-container {
     display: flex;
-    
+
+    align-items: center;
+    justify-content: center;
+    top: 50%;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    padding: 20px;
 }
 
-.score{
+.score {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-size: 24px;
     height: 100px;
@@ -200,7 +221,8 @@
     border-radius: 10px;
     margin-top: 40px;
 }
-.right{
+
+.right {
     height: 100px;
     color: rgba(0, 0, 0, 1);
     font-weight: 600;
@@ -212,7 +234,8 @@
     border-radius: 10px;
     min-width: max-content;
 }
-.wrong{
+
+.wrong {
     display: flex;
     align-items: center;
     height: 100px;
@@ -220,30 +243,31 @@
     font-weight: 600;
     font-size: 24px;
     margin-right: 20px;
-    
+
 }
 
-.final-score{
+.final-score {
     margin-top: 10px;
     font-size: 20px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
 }
 
-.message{
-    font-size: 32px;
+.message {
+    font-size: 28px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
     margin-top: 40px;
 }
-.text{
+
+.text {
     font-size: 32px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
-    
+
 }
 
-.retry-btn{
+.retry-btn {
     height: 56px;
     width: 216px;
     background-color: rgba(53, 189, 58, 1);
@@ -255,22 +279,23 @@
     margin-top: 20px;
 }
 
-.share-on{
+.share-on {
     color: rgba(83, 83, 83, 1);
     font-weight: 600;
     font-size: 24px;
-    margin-top: 120px;
+    margin-top: 24px;
 }
-.socials{
+
+.socials {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.high-score{
+.high-score {
     margin-top: 40px;
     font-weight: 600;
-    font-size: 24px ;
+    font-size: 24px;
     color: rgba(0, 0, 0, 1);
 }
 
@@ -282,7 +307,168 @@
     font-size: 80px;
     font-weight: 600;
     color: red;
-    
+
     display: none;
 }
 
+@media (max-width:920px) {
+    .home-page img {
+        height: 300px;
+        width: 650px;
+    }
+
+    .h1-bg {
+        height: 100px;
+        width: 400px;
+    }
+
+    .home-page h1 {
+        font-size: 40px;
+    }
+
+    .time-out {
+        font-size: 65px;
+        top: 30%;
+    }
+    .message{
+        font-size: 24px;
+    }
+}
+
+@media(max-width:700px) {
+    .home-page img {
+        height: 150px;
+        width: 350px;
+    }
+
+    .h1-bg {
+        height: 70px;
+        width: 200px;
+    }
+
+    .home-page h1 {
+        font-size: 20px;
+    }
+
+    .high-score {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .time-out {
+        font-size: 45px;
+        left: 45%;
+        top: 50%;
+    }
+
+    .current-question-count {
+        height: 36px;
+        width: 64px;
+        font-size: 16px;
+    }
+    .question-container {
+        height: 100px;
+    }
+    .question-container p{
+        font-size: 16px;
+    }
+    .countdown p {
+        font-size: 30px;
+        height: 36px;
+        width: 96px;
+    }
+    .options{
+        height: 60px;
+        font-size: 16px;
+    }
+    .result-container .quiz-img{
+        height: 70px;
+        width: 150px;
+    }
+    .result-container .text{
+        font-size: 28px;
+    }
+    .score{
+        height: 75px;
+        width: 300px;
+    }
+    .score .right{
+        height: 75px;
+        width: 300px;
+    }
+    .message{
+        font-size: 12px;
+    }
+    .retry-btn{
+        height: 36px;
+        width: 136px;
+        font-size: 16px;
+    }
+    .share-on{
+        margin-top: 12px;
+        font-size: 16px;
+    }
+    .socials > a > img{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width:380px) {
+    .home-page img {
+        height: 120px;
+        width: 250px;
+    }
+
+    .h1-bg {
+        height: 50px;
+        width: 100px;
+    }
+
+    .home-page h1 {
+        font-size: 12px;
+    }
+    .question-count img{
+        height: 18px;
+        width: 28px;
+    }
+    .current-question-count {
+        height: 28px;
+        width: 48px;
+        font-size: 12px;
+    }
+    .question-container p{
+        font-size: 12px;
+    }
+    .options{
+        height: 40px;
+        font-size: 12px;
+    }
+    .high-score {
+        font-size: 12px;
+        margin-top: 16px;
+    }
+    .countdown p {
+        font-size: 20px;
+        height: 28px;
+        width: 68px;
+    }
+    .time-out {
+        font-size: 28px;
+        top: 50%;
+    }
+    .score{
+        height: 55px;
+        width: 250px;
+    }
+    .score .right{
+        height: 55px;
+        width: 250px;
+    }
+    .right{
+        font-size: 20px;
+    }
+    .score .wrong{
+        font-size: 20px;
+    }
+}
