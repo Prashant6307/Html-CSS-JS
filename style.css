@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-btn{
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: aqua;
+    padding: 8px;
+}
+
+.start-btn{
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: aqua;
+    padding: 8px;
+}
+
+button:disabled{
+    cursor: not-allowed;
+}
