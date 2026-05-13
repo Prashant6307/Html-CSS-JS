@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <form>
+        <div class="amount-container">
+            <p>Bill</p>
+            <input class="bill" type="number">
+            <p class="tip">Select Tip</p>
+            <div class="grid">
+                <div class="tip-btn five">5%</div>
+                <div class="tip-btn ten">10%</div>
+                <div class="tip-btn fifteen">15%</div>
+                <div class="tip-btn twenty">25%</div>
+                <div class="tip-btn fifty">50%</div>
+                <div class="tip-btn seventy-five">75%</div>
+            </div>
+            <input class="custom-tip" type="number" placeholder="Custom Tip" min="1" max="75">
+            <div class="people">
+                <p>Number Of People</p>
+                <input type="number">
+            </div>
+            <div class="bill-btn-container">
+                <button class="generate-bill-btn" type="submit">Generate Bill</button>
+            </div>
+
+        </div>
+
+        <div class="result-container">
+            <div class="flex">
+                <p>Tip Amount</p>
+                <p class="tip-amount bold">000</p>
+            </div>
+            <div class="flex">
+                <p>Total</p>
+                <p class="total-amount bold">Total</p>
+            </div>
+            <div class="flex">
+                <p>Each Person Bill</p>
+                <p class="individual-bill bold">Each Person Bill</p>
+            </div>
+            <button class="reset-btn" type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+</html>
