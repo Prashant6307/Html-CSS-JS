@@ -47,6 +47,7 @@ input{
 .custom-tip{
     background-color: rgb(226, 226, 226);
     border: none;
+    grid-column: span 3;
 }
 
 .people{
@@ -65,7 +66,10 @@ input{
     border-radius: 4px;
     border: none;
 }
-
+.generate-bill-btn:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 .result-container{
 
     display: flex;
@@ -76,7 +80,7 @@ input{
     width: 400px;
     margin-left: 16px;
     border-radius: 12px;
-    padding: 20px 12px;
+    padding: 32px 24px;
 
 }
 .result-container p{

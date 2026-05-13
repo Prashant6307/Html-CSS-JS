@@ -13,7 +13,7 @@
     <form>
         <div class="amount-container">
             <p>Bill</p>
-            <input class="bill" type="number">
+            <input class="bill" type="number" required>
             <p class="tip">Select Tip</p>
             <div class="grid">
                 <div class="tip-btn five">5%</div>
@@ -22,11 +22,12 @@
                 <div class="tip-btn twenty">25%</div>
                 <div class="tip-btn fifty">50%</div>
                 <div class="tip-btn seventy-five">75%</div>
+                <input class="custom-tip" type="number" placeholder="Custom Tip" min="0" max="100" >
             </div>
-            <input class="custom-tip" type="number" placeholder="Custom Tip" min="1" max="75">
+            <!-- <input class="custom-tip" type="number" placeholder="Custom Tip" min="1" max="75"> -->
             <div class="people">
                 <p>Number Of People</p>
-                <input type="number">
+                <input class="person-count" type="number" value="1">
             </div>
             <div class="bill-btn-container">
                 <button class="generate-bill-btn" type="submit">Generate Bill</button>
@@ -37,15 +38,15 @@
         <div class="result-container">
             <div class="flex">
                 <p>Tip Amount</p>
-                <p class="tip-amount bold">000</p>
+                <p class="tip-amount bold"></p>
             </div>
             <div class="flex">
                 <p>Total</p>
-                <p class="total-amount bold">Total</p>
+                <p class="total-amount bold"></p>
             </div>
             <div class="flex">
                 <p>Each Person Bill</p>
-                <p class="individual-bill bold">Each Person Bill</p>
+                <p class="individual-bill bold"></p>
             </div>
             <button class="reset-btn" type="reset">Reset</button>
         </div>
